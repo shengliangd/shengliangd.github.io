@@ -64,6 +64,10 @@ kramdown:
 # Netease settings
 netease_comment: false
 
+# Valine settings
+valine_appid: 2RQxywEz1qOrb0OVRv4Gx7PX-gzGzoHsz
+valine_appkey: bnszAW3Tdw4buS0yQKD6SM0I
+
 
 
 # Analytics settings

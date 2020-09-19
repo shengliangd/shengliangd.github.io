@@ -61,6 +61,10 @@ layout: default
                 <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
                 <!-- 网易云跟帖 评论框 end -->
                 {% endif %}
+
+                {% if site.valine_appid %}
+                <div id="vcomments"></div>
+                {% endif %}
             </div>  
 
     <!-- Side Catalog Container -->
@@ -133,6 +137,16 @@ layout: default
     })();
 </script>
 <!-- disqus 公共JS代码 end -->
+{% endif %}
+
+{% if site.valine_appid %}
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: "{{ site.valine_appid }}",
+        appKey: "{{ site.valine_appkey }}"
+    })
+</script>
 {% endif %}
 
 
