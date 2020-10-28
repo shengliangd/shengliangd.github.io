@@ -9,7 +9,7 @@ typora-root-url: ../
 published: true
 ---
 
-受疫情影响在家用 Teamviewer 远程连接实验室的机器有一阵子了，体验相当差，比如在大西北经常登录不上账号、偶尔被检测为商业用途等。今天我机智的女朋友慧星同学发现了[向日葵远程控制](https://sunlogin.oray.com/)，在她的 iPad 和 Windows PC 上体验不错，于是我也想试试。对于 Linux，该软件提供了 Ubuntu/Deepin 和 CentOS 两种安装包，而我实验室的机器上装的是 Debian，原则上 Ubuntu/Deepin 的安装包是适用的，但实际安装过程中遇到了两个问题，在这里分享一下解决方案。
+受疫情影响在家用 Teamviewer 远程连接实验室的机器有一阵子了，体验相当差，比如在大西北经常登录不上账号、偶尔被检测为商业用途等。今天发现了[向日葵远程控制](https://sunlogin.oray.com/)，对于 Linux，该软件提供了 Ubuntu/Deepin 和 CentOS 两种安装包，而我实验室的机器上装的是 Debian，原则上 Ubuntu/Deepin 的安装包是适用的，但实际安装过程中遇到了两个问题，在这里分享一下解决方案。
 
 下载安装包后用 `dpkg -i xxx.deb` 安装，先报了下面的错误（只截取最相关的部分，下同）：
 
@@ -56,3 +56,4 @@ VERSION_CODENAME=bionic
 滑稽的是，鉴于发行版信息是能通过 `/etc/os-release` 等文件修改的，上图并不能证明上述方法的有效性，本文真实性请自行判断（
 
 最后别忘了把 `/etc/apt/sources.list`、`/etc/issue`、`/etc/os-release` 改回去。`/usr/lib/os-release` 虽然没有手动修改，但也跟着变了，所以也要改回去，具体原因没深究。
+
