@@ -6,7 +6,7 @@ date:       2021-05-02 22:00:00
 tags:
     - Misc
 typora-root-url: ../
-published: true
+published: false
 ---
 
 Recently I need to run some experiment on AWS with two servers, GPU, RDMA.
