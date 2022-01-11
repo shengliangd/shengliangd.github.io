@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "A Brief Outline of Survival Skills for ..."
+title:      "A Brief Outline of Survival Skills in CS"
 subtitle:   ""
 date:       2021-09-08 15:00:00
 tags:
@@ -16,13 +16,6 @@ Docker
 * Enabling privileged operations inside a container, e.g., read/write serial ports
 * Mounting your host directory into containers
 * Exporting and loading images/containers
-
-ROS/ROS2
-
-* Finding out running nodes and available topics
-* Monitoring messages over specific topics
-* Visualizing things with rqt/rviz
-* Limiting the network interface to use
 
 IDE
 
@@ -40,7 +33,7 @@ Debugging networking problems
 
 Debugging environment issues
 
-* Identifying the most important error messages from bulk outputs
+* Identifying important error messages from bulk outputs
 * Resolving version requirements without messing up everything else (e.g., with venv, conda, docker, etc.)
 
 Shell operations
@@ -53,8 +46,7 @@ Shell operations
 Coding
 
 * Writing intuitive and neat code
-* Coding with comments when you need others to understand (well, there are cases when people do not wish others to understand the code)
-* Coding with comments when you need yourself to think clearly
+* Coding with understandable comments
 
 Misc
 
