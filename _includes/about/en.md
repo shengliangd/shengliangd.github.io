@@ -13,6 +13,6 @@ My research interests include robotic systems, operating systems, and networking
 
 * **CTDMA: Color-aware TDMA Network System For Low latency and High Throughput in Dense D2D Wireless Network** ([link](https://ieeexplore.ieee.org/document/9356015))
 
-  Xiuxian Guan, Yawei Li, Yuexuan Wang, Zekai Sun, Shengliang Deng, Heming Cui
+  Xiuxian Guan, Yawei Li, Yuexuan Wang, Zekai Sun, Shengliang Deng, Heming Cui*
 
   2020 IEEE 17th International Conference on Mobile Ad Hoc and Sensor Systems (MASS)
