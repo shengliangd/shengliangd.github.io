@@ -6,7 +6,7 @@ date:       2022-01-08 20:00:00
 tags:
     - Reading
 typora-root-url: ../
-published: True
+published: true
 ---
 
 小心，轻度剧透！

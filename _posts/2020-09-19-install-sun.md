@@ -6,7 +6,7 @@ date:       2020-09-19 19:00:00
 tags:
     - Misc
 typora-root-url: ../
-published: true
+published: False
 ---
 
 受疫情影响在家用 Teamviewer 远程连接实验室的机器有一阵子了，体验相当差，比如在大西北经常登录不上账号、偶尔被检测为商业用途等。今天发现了[向日葵远程控制](https://sunlogin.oray.com/)，对于 Linux，该软件提供了 Ubuntu/Deepin 和 CentOS 两种安装包，而我实验室的机器上装的是 Debian，原则上 Ubuntu/Deepin 的安装包是适用的，但实际安装过程中遇到了两个问题，在这里分享一下解决方案。
