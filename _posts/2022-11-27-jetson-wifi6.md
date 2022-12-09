@@ -9,10 +9,10 @@ typora-root-url: ../
 published: True
 ---
 
-**TL;DR:** pass the USB device in a VM with higher version Linux kernel, but need to remove several lines in the kernel source and recompile the kernel to make KVM work on Jetson (may be unnecessary with later kernel updates).
+**TL;DR:** pass the USB device in a VM with higher version Linux kernel, but need to remove several lines in the kernel source and recompile to make KVM work on Jetson; may not need to modify the kernel with future kernel updates.
 
 I want to use a WiFi 6 USB adapter ([CF-953AX](http://www.comfast.cn/index.php?m=content&c=index&a=show&catid=13&id=149)) on Jetson Xavier NX.
-This is quite tricky because, the kernel driver (mt7921u) is available only after Linux 5.19, while the newest Jetson SDK comes with Linux 5.10.
+This is quite tricky because, the kernel driver (mt7921u) is available only after Linux 5.19, while the newest Jetson SDK comes with `5.10.104-tegra`.
 
 A straight thought would be to upgrade the Linux kernel on Jetson board.
 However, that would require a lot of customization and kernel patching, which is tedious and error-prone.
