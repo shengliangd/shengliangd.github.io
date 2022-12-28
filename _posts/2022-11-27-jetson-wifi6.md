@@ -43,5 +43,5 @@ Let's just do it in another direction, namely remove [the backported commit](htt
 As the commit message implies, it is not critical. After manually removing this patch, I compiled and replaced the Linux kernel (see [this](https://github.com/ShengliangD/shengliangd.github.io.git)), and reboot.
 Then the VM starts, and the USB WiFi adapter is recognized in the VM.
 Unfortunately, a quick test with iperf3 only got around 18Mbps speed, which is much slower than [others' test](https://github.com/morrownr/USB-WiFi/discussions/88)(~500Mbps).
-I will look into it and share the progress later.
-Anyway, the WiFi adapter is working in the VM, and I believe there is no need to mention how to set up routing rules to bridge the network between the host and the VM.
+
+**(TO BE CONTINUED: 1. speed; 2. bridge the host with the VM)**
