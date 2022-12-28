@@ -73,12 +73,12 @@ sysctl -w net.ipv4.ip_forward=1
 iptables --policy FORWARD ACCEPT
 ```
 
-Then, on the VM, all access to WiFi subnet should rewrite its source IP to the VM's WiFi IP:
+Then, on the VM, all output packets to WiFi subnet should rewrite its source IP to the VM's WiFi IP, such that the remote host response to the VM's WiFi IP instead of the host's IP:
 ```bash
 iptables -t nat -A POSTROUTING -o <vm_wnic> -j SNAT --to-source <vm_wifi_ip>
 ```
 
-Still, on the VM, all access to the VM's WiFi IP should be rewritten to the host's IP.
+Still, on the VM, all input packets from WiFi should be rewritten to the host's IP:
 ```bash
 iptables -t nat -A PREROUTING -i <vm_wnic> -j DNAT --to-destination <host_ip>
 ```
