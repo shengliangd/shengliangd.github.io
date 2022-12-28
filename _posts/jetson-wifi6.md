@@ -2,7 +2,7 @@
 layout:     post
 title:      "WiFi 6 on Jetson Xavier NX"
 subtitle:   ""
-date:       2022-11-27 22:30:00
+date:       2022-12-30 10:30:00
 tags:
     - Misc
 typora-root-url: ../
@@ -21,7 +21,9 @@ Then I tried to look for backport of mt7921u driver, but no result (please let m
 Then one idea comes to my mind: why not just **drive the USB device in a VM, and bridge the network to the host**?
 There will be no risk of messing up the host kernel, and I will be free to use newest Linux kernel, just with a little performance loss, which is definitely worthwhile.
 
-Then I downloaded Ubuntu 22.10 server version for arm64, which comes with Linux 5.19.
+# Setup the VM
+
+I downloaded Ubuntu 22.10 server version for arm64, which comes with Linux 5.19.
 To ease the setup, I used virt-manager.
 I believe there is no need to remind the readers about how to setup the VM with USB passthrough, just tweak in the virt-manager UI, one can easily find these settings.
 
@@ -43,5 +45,45 @@ Let's just do it in another direction, namely remove [the backported commit](htt
 As the commit message implies, it is not critical. After manually removing this patch, I compiled and replaced the Linux kernel (see [this](https://github.com/ShengliangD/shengliangd.github.io.git)), and reboot.
 Then the VM starts, and the USB WiFi adapter is recognized in the VM.
 Unfortunately, a quick test with iperf3 only got around 18Mbps speed, which is much slower than [others' test](https://github.com/morrownr/USB-WiFi/discussions/88)(~500Mbps).
+Let's first make the host able to access the WiFi, then debug the speed issue.
 
-**(TO BE CONTINUED: 1. speed; 2. bridge the host with the VM)**
+# Setup Routing
+
+Now, the VM is up and running with a USB WiFi adapter.
+But how do we access the WiFi from the host?
+
+First, make sure the host and the VM can access each other.
+This can be done by setting up a bridged network.
+Then, set up routing on the host so that access to WiFi ips from the host goes to the VM.
+Finally, set up NAT on the VM with the following commands:
+
+```bash
+# enable ip forwarding
+sysctl -w net.ipv4.ip_forward=1
+iptables --policy FORWARD ACCEPT
+# set up NAT
+iptables -t nat -A POSTROUTING -o <vm_wnic> -j MASQUERADE
+```
+
+However, in this way, the host hides behind NAT and cannot be accessed by devices in WiFi.
+We actually would like to make the VM just like a driver, or to be more specific, make the WiFi IP of the VM behave like an IP of the host.
+First of all, ip forwarding in the VM is still necessary:
+```bash
+sysctl -w net.ipv4.ip_forward=1
+iptables --policy FORWARD ACCEPT
+```
+
+Then, on the VM, all access to WiFi subnet should rewrite its source IP to the VM's WiFi IP:
+```bash
+iptables -t nat -A POSTROUTING -o <vm_wnic> -j SNAT --to-source <vm_wifi_ip>
+```
+
+Still, on the VM, all access to the VM's WiFi IP should be rewritten to the host's IP.
+```bash
+iptables -t nat -A PREROUTING -i <vm_wnic> -j DNAT --to-destination <host_ip>
+```
+
+Now the WiFi IP of the VM behaves like an IP of the host.
+
+# Speed
+**TODO**
