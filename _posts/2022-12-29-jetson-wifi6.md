@@ -9,17 +9,18 @@ typora-root-url: ../
 published: True
 ---
 
-**TL;DR:** pass the USB device in a VM with higher version Linux kernel, but need to remove several lines in the kernel source and recompile to make KVM work on Jetson; may not need to modify the kernel with future kernel updates.
-
 I want to use a WiFi 6 USB adapter ([CF-953AX](http://www.comfast.cn/index.php?m=content&c=index&a=show&catid=13&id=149)) on Jetson Xavier NX.
-This is quite tricky because, the kernel driver (mt7921u) is available only after Linux 5.19, while the newest Jetson SDK comes with `5.10.104-tegra`.
+This is quite tricky because the kernel driver (mt7921u) is available only after Linux 5.19, while the newest Jetson SDK comes with `5.10.104-tegra`.
 
 A straight thought would be to upgrade the Linux kernel on Jetson board.
 However, that would require a lot of customization and kernel patching, which is tedious and error-prone.
 Then I tried to look for backport of mt7921u driver, but no result (please let me know if there is!).
 
 Then one idea comes to my mind: why not just **drive the USB device in a VM, and bridge the network to the host**?
-There will be no risk of messing up the host kernel, and I will be free to use newest Linux kernel, just with a little performance loss, which is definitely worthwhile.
+There will be no risk of messing up the host kernel, and I will be free to use newest Linux kernel.
+It is definitely worth a try, but finally I could only get \<20Mbps speed, and haven't found the root cause yet.
+In the end I manually backported the mt7921u driver from Linux 5.19, check out the repo [here](https://github.com/ShengliangD/mt76-backport.git) if you need it.
+Although the VM solution is not perfect, it is still an interesting idea, and the steps are shared in this post.
 
 # Setup the VM
 
@@ -84,6 +85,3 @@ iptables -t nat -A PREROUTING -i <vm_wnic> -j DNAT --to-destination <host_ip>
 ```
 
 Now the WiFi IP of the VM behaves like an IP of the host.
-
-# Speed
-**TODO**
