@@ -11,15 +11,16 @@ published: True
 
 I want to use a WiFi 6 USB adapter ([CF-953AX](http://www.comfast.cn/index.php?m=content&c=index&a=show&catid=13&id=149)) on Jetson Xavier NX.
 This is quite tricky because the kernel driver (mt7921u) is available only after Linux 5.19, while the newest Jetson SDK comes with `5.10.104-tegra`.
-
 A straight thought would be to upgrade the Linux kernel on Jetson board.
 However, that would require a lot of customization and kernel patching, which is tedious and error-prone.
-Then I tried to look for backport of mt7921u driver, but no result (please let me know if there is!).
+Then I tried to look for backport of mt7921u driver, but no result.
 
 Then one idea comes to my mind: why not just **drive the USB device in a VM, and bridge the network to the host**?
 There will be no risk of messing up the host kernel, and I will be free to use newest Linux kernel.
 It is definitely worth a try, but finally I could only get \<20Mbps speed, and haven't found the root cause yet.
-In the end I manually backported the mt7921u driver from Linux 5.19, check out the repo [here](https://github.com/ShengliangD/mt76-backport.git) if you need it.
+In the end I manually backported the mt7921u driver from Linux 5.19, and get 280Mbps for now.
+Check out my [repo](https://github.com/ShengliangD/mt76-backport.git) if you need it.
+
 Although the VM solution is not perfect, it is still an interesting idea, and the steps are shared in this post.
 
 # Setup the VM
