@@ -4,7 +4,7 @@ title:      "WiFi 6 on Jetson Xavier NX"
 subtitle:   ""
 date:       2022-12-30 10:30:00
 tags:
-    - Misc
+    - Tech
 typora-root-url: ../
 published: True
 ---
@@ -18,8 +18,8 @@ Then I tried to look for backport of mt7921u driver, but no result.
 Then one idea comes to my mind: why not just **drive the USB device in a VM, and bridge the network to the host**?
 There will be no risk of messing up the host kernel, and I will be free to use newest Linux kernel.
 It is definitely worth a try, but finally I could only get \<20Mbps speed, and haven't found the root cause yet.
-In the end I decide to backport the mt7921u driver from Linux 5.19.
-Check out my [repo](https://github.com/ShengliangD/mt76-backport.git) if you need it, and I will post another blog about backporting once it works well.
+In the end I decide to backport the mt7921u driver from Linux 5.19, described in my [next blog]().
+Check out my [repo](https://github.com/ShengliangD/mt76-backport.git) if you need it.
 
 Although the VM solution is not perfect, it is still an interesting idea, and the steps are shared in this post.
 
