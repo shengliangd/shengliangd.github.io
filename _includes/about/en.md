@@ -8,7 +8,7 @@ Therefore, I paused my Ph.D. study to gain a deeper understanding of real-world 
 
 During the past months at Momenta, I designed and developed a powerful & easy-to-use debugging platform from scratch, significantly alleviating the burdens faced by both the R&D and road test teams. Recently, I’m having a new internship in Tusen.
 
-I’m also exploring the possibility of making contributions in AI interpretability, especially for large language models (LLM) (though much to catch up!). I believe they are vital given the rapid development of LLM-based applications. I also share interesting things I learned via short videos, search for user '\_\_起名太难\_\_' on BiliBili if you are interested!
+I’m also exploring the possibility of making contributions in AI interpretability, especially for large language models (LLM) (though much to catch up!). I believe the interpretability is vital given the rapid development of LLM-based applications. I also share interesting things I learned via short videos, search for user '\_\_起名太难\_\_' on BiliBili if you are interested!
 
 ## Publications
 
