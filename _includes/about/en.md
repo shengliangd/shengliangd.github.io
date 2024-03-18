@@ -4,11 +4,9 @@ I received my B.Eng. degree from [The University of Science and Technology of Ch
 
 I enjoy tackling challenges and difficulties.
 My academic journey began with a focus on robotic systems and networking. However, as time passed, I came to realize that the major roadblocks of contemporary intelligent systems lie in algorithms and engineering practices, instead of scheduling, networking, etc.
-Therefore, I paused my Ph.D. study to gain a deeper understanding of real-world problems through industry internships.
+Therefore, I paused my Ph.D. study during 2023 to gain a deeper understanding of real-world problems, through industry internships in Momenta and Tusimple, and had a wonderful engineering journey.
 
-During the past months at Momenta, I designed and developed a powerful & easy-to-use debugging platform from scratch, significantly alleviating the burdens faced by both the R&D and road test teams. Recently I’m having a new internship in Tusen to further extend my experience.
-
-I’m also exploring the possibility of making contributions in the rapid development of AI, especially on large language models (LLM) (though much to catch up!). I would occasionally share things I learned on BiliBili, search for user '\_\_起名太难\_\_' if you are interested!
+Now I’m at BAAI to explore the possibility of making contributions in the rapid development of AI, especially on embodied AI and large language models (LLM) (though much to catch up!). I would occasionally share things I learned on BiliBili, search for user '\_\_起名太难\_\_' if you are interested!
 
 ## Publications
 
