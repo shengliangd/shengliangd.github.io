@@ -9,11 +9,6 @@ Therefore, I paused my Ph.D. study during 2023 to gain a deeper understanding of
 With a strong engineering background and a high aptitude for learning new things, in early 2024, I was privileged to collaborate on embodied multimodal LLMs with esteemed researchers from [BAAI](https://www.baai.ac.cn/) and [Galbot](https://www.galbot.com/).
 Our goal is to develop generalizable skills and embodied models for robots to facilitate embodied AGI.
 
-As a Ph.D. student, I believe we researchers should focus on finding generalizable and robust solutions to challenging problems under practical settings, if not working on fundamental theories.
-This process could be time-consuming and sometimes painful, but it ultimately leads to long-lasting advancements beyond papers.
-I must candidly admit that my initial phase of Ph.D. studies did not quite reflect this ideal.
-However, I am trying my best to align my future work more closely with these principles.
-
 <!-- With the purpose of solving valuable and practical problems, I am always open to learn new things on demand. Currently, my technical skills span across deep learning, robotics simulation, Docker, Linux usage & kernel hacking, ROS, and a little bit about front-end development. -->
 
 ## Publications
