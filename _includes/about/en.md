@@ -4,12 +4,10 @@ I received my B.Eng. degree from [The University of Science and Technology of Ch
 
 I enjoy tackling challenges and difficulties.
 My academic journey began with a focus on robotic systems and networking. However, as time passed, I came to realize that the major roadblocks of contemporary robotics arise from algorithms and engineering practices, instead of scheduling, networking, etc.
-Therefore, I paused my Ph.D. study during 2023 to gain a deeper understanding of real-world problems, through industry internships in Momenta and Tusimple, and had a wonderful engineering journey.
+Therefore, I paused my Ph.D. study during 2023 to gain a deeper understanding of real-world problems, through industry internships in Momenta and TuSimple, and had a wonderful engineering journey.
 
-With a strong engineering background and a high aptitude for learning new things, in early 2024, I was privileged to collaborate on embodied multimodal LLMs with esteemed researchers from [BAAI](https://www.baai.ac.cn/) and [Galbot](https://www.galbot.com/).
-Our goal is to develop generalizable skills and embodied models for robots to facilitate embodied AGI.
-
-<!-- With the purpose of solving valuable and practical problems, I am always open to learn new things on demand. Currently, my technical skills span across deep learning, robotics simulation, Docker, Linux usage & kernel hacking, ROS, and a little bit about front-end development. -->
+With a strong engineering background and a passion for learning new things, in early 2024, I was privileged to start collaborating with esteemed researchers from [Galbot](https://www.galbot.com/) and [BAAI](https://www.baai.ac.cn/) on building generalizable vision-language-action models (VLAs).
+Our goal is to develop generalizable skills and embodied models to facilitate embodied AGI.
 
 ## Publications
 
