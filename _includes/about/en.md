@@ -6,7 +6,7 @@ I enjoy tackling challenges and difficulties.
 My academic journey began with a focus on robotic systems and networking. However, as time passed, I came to realize that the major roadblocks of contemporary robotics arise from algorithms and engineering practices, instead of scheduling, networking, etc.
 Therefore, I paused my Ph.D. study during 2023 to gain a deeper understanding of real-world problems, through industry internships in Momenta and TuSimple, and had a wonderful engineering journey.
 
-With a strong engineering background and a passion for learning new things, in early 2024, I was privileged to start collaborating with esteemed researchers from [Galbot](https://www.galbot.com/) and [BAAI](https://www.baai.ac.cn/) on building generalizable vision-language-action models (VLAs).
+In early 2024, I was privileged to start collaborating with esteemed researchers from [Galbot](https://www.galbot.com/) and [BAAI](https://www.baai.ac.cn/) on building generalizable vision-language-action models (VLAs).
 Our goal is to develop generalizable skills and embodied models to facilitate embodied AGI.
 
 ## Publications
